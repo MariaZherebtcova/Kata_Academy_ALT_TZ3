@@ -89,7 +89,8 @@ func main() {
 					parts[0] = strings.ReplaceAll(parts[0], "\"", "")
 					parts[1] = strings.ReplaceAll(parts[1], "\"", "")
 
-					result := parts[0][:strings.Index(parts[0], parts[1])]
+					result := strings.Replace(parts[0], parts[1], "", -1)
+
 
 					fmt.Printf("%q", result)
 
